@@ -8,6 +8,9 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 30d5da3e48b8cbe5ec94c5a202d2962780d3895ba0883123e6788565f71b2953
+  patches:
+    # 2 commits from upstream PR #41 that fix build with python 3.7+
+    - 41.patch
 
 build:
   number: 0
