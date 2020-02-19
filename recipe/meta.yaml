@@ -1,5 +1,5 @@
 {% set name = "DAWG" %}
-{% set version = "0.7.8" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 30d5da3e48b8cbe5ec94c5a202d2962780d3895ba0883123e6788565f71b2953
-  patches:
-    # 2 commits from upstream PR #41 that fix build with python 3.7+
-    - 41.patch
+  sha256: 34881e06278d4a54cf0b402c0c8b587bef0caa78f0eee595adc7a2aa530e48ce
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
