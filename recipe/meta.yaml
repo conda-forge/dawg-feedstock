@@ -10,7 +10,7 @@ source:
   sha256: 34881e06278d4a54cf0b402c0c8b587bef0caa78f0eee595adc7a2aa530e48ce
 
 build:
-  number: 3
+  number: 4
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
